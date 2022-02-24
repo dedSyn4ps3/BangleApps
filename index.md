@@ -1,12 +1,10 @@
-## Welcome to GitHub Pages
+## BangleJS AppLoader Fork
 
-You can use the [editor on GitHub](https://github.com/dedSyn4ps3/BangleApps/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Forked from original repository for custom app testing
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Main Difference
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+All apps in the Loader are the same, aside from the addition of my own `sensorClock` app, which is currently in early testing
 
 ```markdown
 Syntax highlighted code block
