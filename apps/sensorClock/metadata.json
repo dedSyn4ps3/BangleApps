@@ -1,0 +1,16 @@
+{
+  "id": "sensorClock",
+  "name": "Home Sensor Weather Clock",
+  "version": "1.1",
+  "description": "A clock that displays current weather conditions and current home temperature (requires Gadgetbridge and Weather apps).",
+  "icon": "app.png",
+  "type": "clock",
+  "tags": "clock, weather, sensor",
+  "supports": ["BANGLEJS","BANGLEJS2"],
+  "allow_emulator": true,
+  "readme": "README.md",
+  "storage": [
+    {"name":"sensorClock.app.js","url":"app.js"},
+    {"name":"sensorClock.img","url":"app-icon.js","evaluate":true}
+   ]
+}
