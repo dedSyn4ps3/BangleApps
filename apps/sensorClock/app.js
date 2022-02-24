@@ -136,26 +136,29 @@ function draw() {
   
   var weatherJson = getWeather();
   var temps = getValues();
-  var lr = temps.livingroom;
-  var br = temps.bedroom;
+  
+  //var br = temps.bedroom;
   
   if(weatherJson && weatherJson.weather){
       var currentWeather = weatherJson.weather;
       const temp = locale.temp(currentWeather.temp-273.15).match(/^(\D*\d*)(.*)$/);
-      clockLayout.temp.label = temp[1] + " " + temp[2];
+      const tempf = (temp[1] * (9/5)) + 32
+      clockLayout.temp.label = tempf + "  °F";
       const code = currentWeather.code || -1;
       if (code > 0) {
         clockLayout.weatherIcon.src = chooseIconByCode(code);
       } else {
         clockLayout.weatherIcon.src = chooseIcon(currentWeather.txt);
       }
-      const wind = locale.speed(currentWeather.wind).match(/^(\D*\d*)(.*)$/);
-      clockLayout.wind.label = wind[1] + " " + wind[2] + " " + (currentWeather.wrose||'').toUpperCase();
+      const lr = temps.livingroom;
+      clockLayout.temp2.label = lr + "  °F";
+
   }
   else{
       clockLayout.temp.label = "Err";
-      clockLayout.wind.label = "No Data";
+      clockLayout.temp2.label = "No Data";
       clockLayout.weatherIcon.src = errIcon;
+      clockLayout.homeIcon.src = houseIcon;
   }
   clockLayout.clear();
   clockLayout.render();
