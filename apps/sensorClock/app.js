@@ -2,6 +2,21 @@ const Layout = require("Layout");
 const storage = require('Storage');
 const locale = require("locale");
 
+Graphics.prototype.setFontRobotoSlab = function () {
+  // Actual height 41 (40 - 0)
+  var scale = 1; // size multiplier for this font
+  var font = atob("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH+AAAAAAP/AAAAAAP/AAAAAAP/AAAAAAP/AAAAAAP/AAAAAAP/AAAAAAP/AAAAAAP/AAAAAAP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAA+AAAAAAD+AAAAAAP+AAAAAA/+AAAAAD/8AAAAAf/wAAAAB//AAAAAH/8AAAAAf/wAAAAB//AAAAAH/8AAAAAf/gAAAAB/+AAAAAP/4AAAAA//gAAAAD/+AAAAAP/4AAAAA//gAAAAA/8AAAAAA/wAAAAAA/AAAAAAA8AAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAD//8AAAAf///gAAB////4AAD////+AAH/////AAP/////AAP+AD//gAfwAH+/gAfgAf8PwAfAA/wPwAfAD/gHwAfAP+AHwAfAf8AHwAfB/wAPwAfj/AAPwAf/+AA/gAP/4AD/gAP/////AAH/////AAD////8AAB////4AAAf///gAAAB//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8AAAAAAD8AAAAAAH8AAAfAAH4AAAfAAH4AAAfAAPwAAAfAAPwAAAfAAfgAAAfAAfgAAAfAA//////AA//////AA//////AA//////AA//////AA//////AAAAAAAfAAAAAAAfAAAAAAAfAAAAAAAfAAAAAAAfAAAAAAAfAAAAAAAfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHwAAAPgAP4AAAfgAPwAAA/gAPwAAB/gAfgAAD/gAfgAAP/gAfAAAf/gAfAAA//gAfAAB/vgAfAAD/PgA/AAH+PgAfAAP8PgAfAAf4PgAfgB/wPgAfgD/APgAf4P+APgAP//8APgAP//4APgAH//wAPgAD//gAPgAB/+AAPgAAf4AAPgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AAPgAAAfgAPgAAAfgAfgAAAPgAfgAAAPgAfAAAAPwAfAH4APwAfAH4APwAfAH4AHwAfAH4AHwA/AH4AHwAfAH4AHwAfAH4APwAfAH4APwAfgP8AfgAfwf+A/gAP///B/gAP/////AAH/+f//AAD/8f/+AAB/8P/8AAAfwD/4AAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH8AAAAAAP8AAAAAA/8AAAAAB/8AAAAAH/8AAAAAP/8AAAAA/58AAAAD/h8AAAAH/B8AAAAf8B8AAAA/wB8AAAD/gB8AAAP+AB8AAAf4AB8AAA/wAB8AAA//////AA//////AA//////AA//////AA//////AAf/////AAAAAB8AAAAAAB8AAAAAAB8AAAAAAB8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AA///gA/AA///gA/AA///AAfAA///AAfgA///AAfgA///AAfgA+A+AAPgA+A+AAPgA+A+AAPgA+A+AAPgA+A/AAfgA+A/AAfgA+A/gAfAA+AfgA/AA+Af4B/AA+Af/f+AA+AP//+AA+AH//8AA+AD//4AAAAB//wAAAAAf/AAAAAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAB//+AAAAP///wAAA////8AAB////+AAD/////AAH/7///AAP+H8B/gAP4PwAfgAfwPgAPwAfgfAAHwAfAfAAHwAfAfAAHwAfAfAAHwA/AfAAHwAfAfgAPwAfAfgAPgAfAP4A/gAfAP///gAfgH///AAPgH//+AAPgD//+AAAAA//4AAAAAP/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+AAAAAAA+AAAAAAA+AAAAAAA+AAAAAAA+AAAABAA+AAAAPAA+AAAA/AA+AAAH/AA+AAAf/AA+AAD//AA+AAf//AA+AB//4AA+AP//AAA+A//8AAA+H//gAAA+f/+AAAA///wAAAA//+AAAAA//4AAAAA//AAAAAA/4AAAAAA/gAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAHAB/wAAB/4H/8AAD/8P/+AAH/+f//AAP/////AAP/////gAf4/+A/gAfgP8APwAfAH4APwAfAH4AHwAfAD4AHwA+AD4AHwAfAD4AHwAfAH4AHwAfAH8APwAfgP8APgAf9//A/gAP/////gAP//f//AAH/+f//AAD/8P/+AAA/4H/8AAAGAB/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAf/gAAAAB//4AAAAD//8AfgAH//+AfgAP///APgAP+H/gPwAfwA/gPwAfgAfgHwAfAAPgHwAfAAPgHwAfAAPwHwAfAAPgPwAfAAPgPwAfAAPgfgAfgAfgfgAfwA/B/gAP+H+H/AAP/////AAH////+AAD////4AAB////wAAAf///AAAAB//4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AH/AAAH/gH/AAAH/gH/AAAH/gH/AAAH/gH/AAAH/gH/AAAH/gH/AAAH/gH/AAAH/AH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  g.setFontCustom(font, 46, 29, 48 + (scale << 8) + (1 << 16));
+}
+
+Graphics.prototype.setFontAudiowideSmall = function () {
+  // Actual height 16 (15 - 0)
+  var widths = atob("BQQGDAkOCwMHBwkJBAkDCw8GDAwMDAwKDAwEBAgJCAsLDQ0MDQwMDQ4EDA0MDw4ODQ4NDAwNDBANDQsGCwYHCwkKCwoLCgkLCwQECwUOCwsLCwkKCQsLDwsLCgcEBwoI");
+  var font = atob("AAAAAAAAAAAAAAAA/7D/sAAAeAB4AAAAeAB4AAAAAAABgBnwH/D/wPmAGfAf8P+A+YAZAAAAHgA+wD7A9vD28DfAN4ACAAAAAAA8AH4AZhB+cD3wA8APAD3gc/BDMAOwAfAAwACAP+B/8GYwZjBmMGAwYPAB4AGAAAAAAHgAeAAAAD/A//Dw+MA8AAwABAAEAAzAHPD8//A/wAAAAABuAHwA/wD/AHwAbgAAAAAABgAGAAYAP8A/wAYABgAGAAAAAAQAPAA4AAAAAAYABgAGAAYABgAGAAYAAAAAAAAwADAAAAAQAHAB8APADwA+APgA4ADAAAAAAAA/wH/g8PDh8MOwxzDPMM4w3DD4cPjwf+A/wAAAwADAAP/w//AAAAAAAAAD8MfwxjDGMMYwxjDGMOYw/jB8MAAAAADGMMYwxjDGMMYwxjDmMP/wf+AAAAAAAAD+AP4ABgAGAAYABgAGAAYA//D/8AAAAAD8MP4wxjDGMMYwxjDGMMYwx/DD4ACAAAA/wH/g5nDGMMYwxjDGMMYwx/AD4AAAwADAEMBwwfDD4M+A/gD4AOAAQAAAAAPgf/D/cMYwxjDGMMYw/3B/8APgAAA4AH4A/jDGMMYwxjDGMMYw5nB/4D/AAAAAABgwGDAAAAAIGHgYcAAABgAPAB8AO4BxwGDAQEAAAAAAGYAZgBmAGYAZgBmAGYAAAAAAQEBgwHHAO4AfAA4ABADAAMAAwADHsMewxgDGAP4A/gA4AAAAA4Af8BnwH/AfwB/AH8AfwB/AB4AAAAAAH/B/8HGA4YDhgMGAwYDBgMGA//D/8AAAAAD/8P/wwDDGMMYwxjDGMM4w/zB/8APgAAAAAH/g//DAMMAwwDDAMMAwwDDAMMAwAAAAAP/w//DAMMAwwDDAMMAw4HDw8H/gP8AAAAAA/+D/8MZwxjDGMMYwxjDGMMYwwDAAAAAA//D/8MAAxgDGAMYAxgDGAMYAwAAAAAAAf+D/8MAwxjDGMMYwxjDGMMYwx/DH8AAAAAD/8P/wBgAGAAYABgAGAAYABgD/8P/wAAAAAAAA//D/8AAAADAAMAAwADAAMAAwADAAcP/w/+AAAAAAAAD/8P/wAAAGAA8AH4A/wHng8PDgcMAQAAAAAP/w//AAMAAwADAAMAAwADAAMAAwAAAAAP/w//B8AB8AB8AB8ADwAfAHwB8AfAD/8P/wAAAAAP/w//BwADgAHgAPAAeAA8AB4P/w//AAAAAAAAA/wH/g8PDgcMAwwDDAMMAw4HDgcH/gP8AAAAAAf/D/8OAAwYDBgMGAwYDBgOOA/4B/AAAAAAA/wH/g4HDgcMAwwDDAMMA44Hzw/H/kP8AAAAAA//D/8MAAwwDDgMPAw8DD4Mdw/zB+EAAAAAB8MP4w5jDGMMYwxjDGMMYwx3DH8APgwADAAMAAwADAAP/w//DAAMAAwADAAMAAAAD/gP/gAOAAcABwADAAMAAwADD/8P/wAACAAOAA+AA/AA/AA/AA8APgD4B+APgA4ACAAP4A//AP8AHwB8AfADwAPAAfAAfAA+AP8P/w/gCAAIAQ4HDw8HngP8APAB+AP8B54OBwwDCAEAAAAAD+AP8ABwADAAPwA/AD8AMABwD/AP4AAAAAAMBwwPDB8MPwx7DeMPww+DDwMOAwAAD//P/8gBwADAAMgADAAPAAfAAeAAeAA+AA8AAwABAAAAAAAAwADP/8//wAADwAcADgAOAAeAA8AAAAAAAABgAGAAYABgAGAAYABgAGAAYAAAAAgACAAMAAwADAAAAAAAAAAAHgA/AbMBswGzAbMBswH/AP4AAAAAD/4P/wAHAYMBgwGDAYMB/wD+ADgAAAD+Af8BgwGDAYMBgwGDAYMAAAAAAP4B/wHHAYMBgwGDAYMP/w/+AAAAAAD+Af8BgwGbAZsBmwGbAfgA8AAAD/8P/wwACYAJgAmACYAJgAAAAP4B/wGDMYMxgzGDMcNx//D/4AAAAA//D/8AAAGAAYABgAGAAf8A/wB/AAAJ/wn/AAAAAHn/+f/gAAAAD/8P/wAwAHgAfAD+Ac8BhwEDAQEAAA/+D/8ABwADAP8B/wH/AYABgAGAAf8B/wHAAYABwAH/AP8AAAD/Af8B/wGAAYABgAGAAcAB/wD/AAAAAAD+Af8BgwGDAYMBgwHHAf8A/gAAAAAA/+H/4cABgwGDAYMBgwH/AP4AOAAAAP4B/wGDAYMBgwGDAcMB/+D/4AAAAAD/Af8BwAGAAYABgAGAAYAAAADzAfMBswGzAbMBswG/AZ4ADAGAAYABgA//D/8BgAGAAYABgAAAAf4B/wAHAAMAAwADAAMB/wH/AAAAAAH/Af8ABwAHAA4AHgA8AfgB4AGAAAAB/wH/AB4APAB4AP4B/wH/AA4AHgB4AfABwAEAAQEBgwHHAf4A/AB4AP4B7wGHAQMAAQAAAf4B/wAHAAMwAzADMAMx//H/4f+BggGHAY8BnwG/AfsB8wHDAYMAAABgAHAP/4//yAHAAMAAAAAP/8//wAAAAAAAyAHP/8//gHAAYAAAAHAAYABgAHAAcAAwADAAcABgAAADAAMAAAACAAMAAAAAAA");
+  var scale = 1; // size multiplier for this font
+  g.setFontCustom(font, 32, widths, 16 + (scale << 8) + (1 << 16));
+}
+
 // weather icons from https://icons8.com/icon/set/weather/color
 var sunIcon = require("heatshrink").decompress(atob("mEwwhC/AH4AbhvQC6vd7ouVC4IwUCwIwUFwQwQCYgAHDZQXc9wACC6QWDDAgXN7wXF9oXPCwowDC5guGGAYXMCw4wCC5RGJJAZGTJBiNISIylQVJrLCC5owGF65fXR7AwBC5jvhC7JIILxapDFxAXOGAy9KC4owGBAQXODAgHDC54AHC8T0FAAQSOGg4qPGA4WUGAIuVC7AA/AH4AEA="));
 
@@ -37,11 +52,11 @@ sent from gadget bridge.
 function chooseIcon(condition) {
   condition = condition.toLowerCase();
   if (condition.includes("thunderstorm")) return stormIcon;
-  if (condition.includes("freezing")||condition.includes("snow")||
+  if (condition.includes("freezing") || condition.includes("snow") ||
     condition.includes("sleet")) {
     return snowIcon;
   }
-  if (condition.includes("drizzle")||
+  if (condition.includes("drizzle") ||
     condition.includes("shower")) {
     return rainIcon;
   }
@@ -95,22 +110,25 @@ function getWeather() {
   return jsonWeather;
 }
 
-var clockLayout = new Layout( {
-  type:"v", c: [
-    {type:"txt", font:"35%", halign: 0, fillx:1, pad: 8, label:"00:00", id:"time" },
-    {type: "h", fillx: 1, c: [
-        {type:"txt", font:"10%", label:"THU", id:"dow" },
-        {type:"txt", font:"10%", label:"01/01/1970", id:"date" }
+var clockLayout = new Layout({
+  type: "v", c: [
+    { type: "txt", font: "RobotoSlab", halign: 0, fillx: 1, pad: 8, label: "00:00", id: "time" },
+    {
+      type: "h", fillx: 1, c: [
+        { type: "txt", font: "AudiowideSmall", label: "THU", id: "dow" },
+        { type: "txt", font: "AudiowideSmall", label: "01/01/1970", id: "date" }
       ]
     },
-    {type: "h", valign : 1, fillx:1, c: [
-      {type: "img", filly: 1, id: "weatherIcon", src: sunIcon},
-      {type: "txt", font: "10%", id: "temp", label: "000 °F"}
+    {
+      type: "h", valign: 1, fillx: 1, c: [
+        { type: "img", filly: 1, halign: -1, id: "weatherIcon", src: sunIcon },
+        { type: "txt", font: "AudiowideSmall", id: "temp", label: "00 °F" }
       ]
     },
-    {type: "h", valign : 1, fillx:1, c: [
-      {type: "img", filly: 1, id: "homeIcon", src: houseIcon},
-      {type: "txt", font: "10%", id: "temp2", label: "000 °F"}
+    {
+      type: "h", valign: 1, fillx: 1, c: [
+        { type: "img", filly: 1, halign: -1, id: "homeIcon", src: houseIcon },
+        { type: "txt", font: "AudiowideSmall", id: "temp2", label: "00 °F" }
       ]
     }
   ]
@@ -122,7 +140,7 @@ var drawTimeout;
 // schedule a draw for the next minute
 function queueDraw() {
   if (drawTimeout) clearTimeout(drawTimeout);
-  drawTimeout = setTimeout(function() {
+  drawTimeout = setTimeout(function () {
     drawTimeout = undefined;
     draw();
   }, 60000 - (Date.now() % 60000));
@@ -133,32 +151,32 @@ function draw() {
   clockLayout.time.label = locale.time(date, 1);
   clockLayout.date.label = locale.date(date, 1).toUpperCase();
   clockLayout.dow.label = locale.dow(date, 1).toUpperCase() + " ";
-  
+
   var weatherJson = getWeather();
   var temps = getValues();
-  
+
   //var br = temps.bedroom;
-  
-  if(weatherJson && weatherJson.weather){
-      var currentWeather = weatherJson.weather;
-      const temp = locale.temp(currentWeather.temp-273.15).match(/^(\D*\d*)(.*)$/);
-      const tempf = (temp[1] * (9/5)) + 32
-      clockLayout.temp.label = tempf + "  °F";
-      const code = currentWeather.code || -1;
-      if (code > 0) {
-        clockLayout.weatherIcon.src = chooseIconByCode(code);
-      } else {
-        clockLayout.weatherIcon.src = chooseIcon(currentWeather.txt);
-      }
-      const lr = temps.livingroom;
-      clockLayout.temp2.label = lr + "  °F";
+
+  if (weatherJson && weatherJson.weather) {
+    var currentWeather = weatherJson.weather;
+    const temp = locale.temp(currentWeather.temp - 273.15).match(/^(\D*\d*)(.*)$/);
+    const tempf = (temp[1] * 1.8) + 32
+    clockLayout.temp.label = tempf + " °F";
+    const code = currentWeather.code || -1;
+    if (code > 0) {
+      clockLayout.weatherIcon.src = chooseIconByCode(code);
+    } else {
+      clockLayout.weatherIcon.src = chooseIcon(currentWeather.txt);
+    }
+    const lr = temps.livingroom;
+    clockLayout.temp2.label = lr + " °F";
 
   }
-  else{
-      clockLayout.temp.label = "Err";
-      clockLayout.temp2.label = "No Data";
-      clockLayout.weatherIcon.src = errIcon;
-      clockLayout.homeIcon.src = houseIcon;
+  else {
+    clockLayout.temp.label = "Err";
+    clockLayout.temp2.label = "No Data";
+    clockLayout.weatherIcon.src = errIcon;
+    clockLayout.homeIcon.src = houseIcon;
   }
   clockLayout.clear();
   clockLayout.render();
