@@ -107,13 +107,13 @@ var clockLayout = new Layout({
     },
     {
       type: "h", valign: 1, c: [
-        { type: "img", filly: 1, id: "weatherIcon", src: sunIcon },
+        { type: "img", filly: 1, pad: 10, id: "weatherIcon", src: sunIcon },
         { type: "txt", font: "10%", id: "temp", label: "00 °F" }
       ]
     },
     {
       type: "h", valign: 1, c: [
-        { type: "img", filly: 1, id: "homeIcon", src: houseIcon },
+        { type: "img", filly: 1, pad: 10, id: "homeIcon", src: houseIcon },
         { type: "txt", halign: 1, font: "10%", id: "temp2", label: "00 °F" }
       ]
     }

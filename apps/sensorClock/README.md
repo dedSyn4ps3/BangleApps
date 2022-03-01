@@ -12,6 +12,7 @@ All functionality of the original app is still in place, with small additions to
 
 See the [Bangle.js Gadgetbridge documentation](https://www.espruino.com/Gadgetbridge) for instructions on setting up Gadgetbridge and weather.
 
+**In order to utilize displaying current home temperature, another companion app is required that makes use of the Initial State dashboard service to retrieve and display various smart-home sensor values** --> [See our articles for info on the companion app](https://medium.com/@erutherford_nullreturn)
 
 ## Original 'Weather Clock' Creator
 
